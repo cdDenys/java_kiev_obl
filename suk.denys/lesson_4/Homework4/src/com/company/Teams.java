@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Teams {
     public static double getResult(double first, double second){
         double percent = 0;
@@ -20,15 +18,14 @@ public class Teams {
         }
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter name of first team: ");
-        String firstName = scan.next();
-        System.out.println("Please enter score for first team: ");
-        double firstTeam = scan.nextInt();
-        System.out.println("Please enter name of second team: ");
-        String secondName = scan.next();
-        System.out.println("Please enter score for second team: ");
-        double secondTeam = scan.nextInt();
+        System.out.println("Please enter name of first team: " + args[0]);
+        String firstName = args[0];
+        System.out.println("Please enter score for first team: " + args[1]);
+        double firstTeam = Integer.parseInt(args[1]);
+        System.out.println("Please enter name of second team: " + args[2]);
+        String secondName = args[2];
+        System.out.println("Please enter score for second team: " + args[3]);
+        double secondTeam = Integer.parseInt(args[3]);
         System.out.println("Name: " + firstName + ". Score: " + firstTeam);
         System.out.println("Name: " + secondName + ". Score: " + secondTeam);
         System.out.println(whoWin(firstTeam, secondTeam));

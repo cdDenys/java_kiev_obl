@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class BinaryCast {
 
     public static String getResult(int first, int second, int third){
@@ -15,13 +13,12 @@ public class BinaryCast {
         return result;
     }
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter first number: ");
-        int firstNum = scan.nextInt();
-        System.out.println("Please enter second number: ");
-        int secondNum = scan.nextInt();
-        System.out.println("Please enter numeric system(2 or 16): ");
-        int thirdNum = scan.nextInt();
+        System.out.println("Please enter first number: " + args[0]);
+        int firstNum = Integer.parseInt(args[0]);
+        System.out.println("Please enter second number: " + args[1]);
+        int secondNum = Integer.parseInt(args[1]);
+        System.out.println("Please enter numeric system(2 or 16): " + args[2]);
+        int thirdNum = Integer.parseInt(args[2]);
         System.out.println(getResult(firstNum, secondNum, thirdNum));
     }
 }

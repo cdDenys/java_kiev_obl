@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Champagne {
     public static final double BOTTLE = 750;
     public static final double GLASS = 100;
@@ -29,9 +27,8 @@ public class Champagne {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter amount of people: ");
-        int peoples = scan.nextInt();
+        System.out.println("Please enter amount of people: " + args[0]);
+        int peoples =Integer.parseInt(args[0]);
         System.out.println("We needs " + getChampagne(peoples) + " bottles.");
         System.out.println("Rest of champagne: " + restChampagne(peoples) + "ml.");
     }
